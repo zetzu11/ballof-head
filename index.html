@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CLICK THIS SHITTY LINK</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0056d8;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+      }
+      
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #d800d8;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+      }
+      button:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
+    <script>
+      let noClickCount = 0;
+
+      function WILL_YOU_MARRY_ME() {
+        document.body.innerHTML = `
+          <h1>KA MOVE ON KANA KAY TONI?</h1>
+          <h1>HAHHAAHHAHAHAHAHAH</h1>
+          <button onclick="YES()">WALA</button>
+          <button id="noBtn" onclick="NO()">OO</button>
+        `;
+      }
+      function TRYAGAIN() {
+        document.body.innerHTML = `
+          <h1>KA MOVE ON KANA KAY TONI??</h1>
+          <h1></h1>
+          <button onclick="YES()">TI HUO NA AH WALA PA</button>
+         
+          
+        `;
+      }
+      
+      function OUM() {
+        document.body.innerHTML = `
+          <h1</h1>
+          <button id="noBtn" onclick="PROMISE()">I PROMISE.</button>
+           <button id="noBtn" onclick="NI()">NO</button>
+        `;
+      }
+      
+      function PROMISE() {
+        document.body.innerHTML = `
+          <h1>KISS MKO:></h1>
+          <h2>HEHEHEHE :)</h2>
+        `;
+      }
+      
+       function NI() {
+        document.body.innerHTML = `
+          <h1>NO CHOICE KA HEHE MWAH!:></h1>
+          <h1>DO YOU PROMISE??</h1>
+          <button id="noBtn" onclick="PROMISE()">I PROMISE.</button>
+          
+        `;
+      }
+     
+
+      function YES() {
+        document.body.innerHTML = `
+          <h1>COMEBACK KMO PWEDI NA </h1>
+          <h2>HAHHAHAHHAHAHAHAHAH</h2>
+          <p></p>
+          <P></p>
+          
+          <pre>
+           
+          </pre>
+          <p>
+            </p> 
+          
+        `;
+      }
+
+      function NO() {
+        noClickCount++;
+        const noBtn = document.getElementById("noBtn");
+
+        if (noClickCount === 1) {
+          moveButtonRandomly(noBtn);
+          
+        } else if (noClickCount === 2) {
+          moveButtonRandomly(noBtn);
+          
+        }  else if (noClickCount === 3) {
+          moveButtonRandomly(noBtn);
+          
+        } else if (noClickCount === 4) {
+          moveButtonRandomly(noBtn);
+          
+        }else if (noClickCount === 5) {
+          moveButtonRandomly(noBtn);
+          
+        }else if (noClickCount === 6) {
+          moveButtonRandomly(noBtn);
+          
+        }else if (noClickCount >= 7 ) {
+          document.body.innerHTML = `
+            <h1>HUO HUO LANG GURO</h1>
+          <h1>HAHHAHAHAHAHAHAHAHHAHAHAHH</h1>
+          <button onclick="TRYAGAIN()">LIWATT</button>
+          
+            <pre>
+              
+            </pre>
+          `;
+        }
+      }
+           
+      
+      function moveButtonRandomly(button) {
+        // Move the button to a random position within the page.
+        const x = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth)) + 'px';
+        const y = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight)) + 'px';
+        button.style.position = 'absolute';
+        button.style.left = x;
+        button.style.top = y;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>YO RAIN</h1>
+    <h2>HAHAHHAHAHAHAHAHAHHAHA</h2>
+
+    
+
+    <!-- Next Button -->
+    <button onclick="WILL_YOU_MARRY_ME()">--></button>
+  </body>
+</html>
